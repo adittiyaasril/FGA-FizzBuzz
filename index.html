@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+
+    
+</head>
+<body>
+    <h1>Program FizzBuzz</h1>
+    <input id="id1" type="number" placeholder="Input number">
+    <button onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
+    <br>
+    <br>
+    <script>
+        function myFunction(){
+            let text;
+            text=document.getElementById('id1').value
+            if (text == 0){
+                text='Invalid input';
+            }
+            else if (text %5 === 0 && text %3 !== 0){
+                text='Buzz!';
+            }  
+            else if (text %5 ===0 && text %3 ===0){
+                text='FizzBuzz!';
+            }
+            else if (text %3 ===0 && text %5 !== 0){
+                text='Fizz!';
+            }
+            document.getElementById("demo").innerHTML=text;
+            console.log(document.getElementById('id1').value)
+        }
+        
+    </script>
+</body>
+</html>
